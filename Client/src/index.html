@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+
+<body class="bg-image" style="
+background-image: url('./assets/img/webpack-logo.png');
+height: 100vh;">
+    <div class="container mt-5 form">
+        <div class="vh-100 d-flex m-5 justify-content-center align-items-center formulario">
+            <div class="col-md-4 shadow p-3 mb-5 bg-body rounded cont">
+
+                <form action='' id="login" novalidate>
+                    <div class="p-5 border rounded-3 contenedorRegistro">
+                        <h1 class="text-center mb-4 animado">INICIO</h1>
+                    </div>
+                    <h4 class="output"></h4>
+                    <div class="mb-4">
+                        <label class="form-label">Email</label>
+                        <input type="email" class="form-control area-texto email" name="email" required
+                            pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$"
+                            placeholder="email@example.com">
+                        <span class="erroremail text-danger"></span>
+                    </div>
+                    <div class="mb-4">
+                        <label class="form-label">Password</label>
+                        <input type="password" class="form-control area-texto password" name="password" required
+                            placeholder="password">
+                        <span class="errorpassword text-danger"></span>
+                    </div>
+                    <div class="mb-4 d-grid gap-2 col-6 mx-auto boton">
+                        <button class="btn btn-primary btn-lg" type="submit">Iniciar Sesión</button>
+                    </div>
+                    <div class="mt-3">
+                        <p class="mb-4 text-center">No estás registrado? <a href="./html/registro.html"
+                                class="text-primary">Registro</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div id="modalRegistro" class="modal">
+        <div class="modalContent">
+            <span class="close">×</span>
+            <p id="parrafo"></p>
+        </div>
+    </div>
+    <!-- <script src="../js/login.js"></script> -->
+    <!-- <footer class="bottom">
+        <span>© 2023</span>
+        <span>Ejercicio Recuperación</span>
+    </footer> -->
+
+</body>
+
+</html>

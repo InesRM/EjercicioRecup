@@ -1,0 +1,162 @@
+@import "animation";
+@mixin tabla($tema) {
+    .container {
+        padding: 0;
+        .container-info{
+            margin: 4vh auto 3vh auto;
+            .crear-prueba{
+                float: right;
+            }
+            .crear-prueba, .volver{
+                background: map.get($tema,"colorSecundario");
+                border-radius: 5vh;
+                border: none;
+                width: 40%;
+                font-size: map-get($tema, "texto");
+                padding: 1vh;
+                color: white;
+                font-weight: map.get($tema,"pesoMedium");
+                &:hover{
+                    background: map.get($tema,"colorPrimario");
+                    transition: all 0.5s;
+                    @include zoom();
+                }
+            }
+            .volver {
+                float: left;
+            }
+        }
+        .tabla{
+            margin-bottom: 5vh;
+            .tabla-header{
+                li{
+                    padding: 0;
+                    margin: auto;
+                    a{
+                        padding: 0;
+                        margin: auto;
+                        color: #000;
+                        font-size: map.get($tema,"categoria");
+                        font-weight: map.get($tema,"pesoMedium");
+                    }
+                }
+            }
+            .contenedor-tabla, .contenedor-tabla-usuarios{
+                overflow-y: scroll;
+                height: 58vh;
+                font-size: map-get($tema, "texto");
+                .card-body{
+                    div{
+                        div{
+                            margin: 0;
+                            padding: 0;
+                        }
+                        .acciones{
+                            text-align: center;
+                            margin: auto;                        
+                            i{
+                                cursor: pointer;
+                                color: map-get($tema, "colorBase");
+                                font-size: map-get($tema, "iconos");
+                                &:hover{
+                                    color: map-get($tema, "colorBaseHover");
+                                    transition: all 0.5s;
+                                    @include zoom();
+                                    @include rotar();
+                                }
+                            }
+                        }
+                        
+                    }
+                } 
+            }
+            .contenedor-tabla-usuarios{
+                .card-body{
+                    &:hover{
+                        .fa-user{
+                            @include color();
+                            transition: 0.5s all;
+                            font-size: map-get($tema, "iconos");
+                        }
+                    }
+                }
+            }
+            .contenedor-tabla::-webkit-scrollbar, .contenedor-tabla-usuarios::-webkit-scrollbar {
+                width: 8px;
+                background-color: rgb(246, 246, 246);
+            }
+            .contenedor-tabla::-webkit-scrollbar-thumb, .contenedor-tabla-usuarios::-webkit-scrollbar-thumb {
+                background: map.get($tema,"colorSecundario");
+                border-radius: 4px;
+            }
+        }
+    }
+    .modal{
+        display: none;
+        position: fixed; 
+        z-index: 1; 
+        height: 100vh;
+        overflow: auto; 
+        background-color: map.get($tema,"sombra"); 
+        .modal-dialog{
+            margin-top: 20vh;
+            .contenedor-modal{
+                .modal-header{
+                    background: map.get($tema,"colorPrimario");
+                }
+                .modal-body{
+                    .card{
+                        .card-header{
+                            h6{
+                                display:flex;
+                                align-items: center;
+                                margin: 0;
+                            }
+                            .form-select{
+                                width: 50%;
+                            }
+                        }
+                        .lista-candidatos{
+                            height: 37vh;
+                            overflow-y: scroll;
+                            .card{
+                                .card-body{
+                                    p{
+                                        margin: 0;
+                                    }
+                                }
+                            }
+                        }
+                        .lista-usuarios{
+                            height: 54vh;
+                            overflow-y: scroll;
+                            .card{
+                                .card-body{
+                                    p{
+                                        margin: 0;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .modal-footer{
+                    button{
+                        background: map.get($tema,"colorSecundario");
+                        border-radius: 10vh;
+                        border: none;
+                        width: 28%;
+                        margin-left: 1rem;
+                        padding: 0.3rem;
+                        font-size: map-get($tema, "texto"); 
+                        &:hover{
+                            background: map.get($tema,"colorPrimario");
+                            transition: all 0.5s;
+                            @include zoom();
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

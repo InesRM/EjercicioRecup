@@ -1,0 +1,103 @@
+@mixin registro($tema) {
+    
+    body { 
+        
+            .bg-image{
+                height: 100%;
+                direction: ltr;
+                background:url(../assets/img/webpack-logo.png);
+                background-size:100% 100%;
+                background-repeat:no-repeat;
+                background-position: center;
+                background-attachment: fixed;
+                overflow: hidden;
+            
+            }
+          
+        footer{
+            margin-top: 0.2vh;
+            padding: 0.3vh;
+            text-align: center;
+            background: map.get($tema,"colorPrimario");
+            color: map.get($tema,"colorLetraBlanco");
+        }
+        
+        .contenedorRegistro{
+           
+            background: map.get($tema,"colorPrimario");
+            color: map.get($tema,"colorLetraBlanco");
+        }
+    
+        .boton {
+            button {
+                background: map.get($tema,"colorSecundario");
+                border-radius: 10vh;
+                border: none;
+                width: 80%;
+                font-size: 12pt;
+            }
+            button:hover{
+                background: map.get($tema,"colorPrimario");
+                transition: all 0.5s;
+                @include zoom();
+            }
+        }
+
+        .animado {
+            animation: div_animado 1s linear;
+            animation-delay: 3s;
+        }
+
+        @keyframes div_animado {
+            0% {transform: rotate(0deg);left:0px;}
+            25% {transform: rotate(20deg);left:0px;}
+            50% {transform: rotate(0deg);left:0px;}
+        }
+
+        .gelatine {
+            animation: gelatine 0.5s linear;
+        }
+
+        @keyframes gelatine {
+        from, to { transform: scale(1, 1); }
+        25% { transform: scale(0.9, 1.1); }
+        50% { transform: scale(1.1, 0.9); }
+        75% { transform: scale(0.95, 1.05); }
+        }
+
+        .bounce-in-right {
+            animation: bounce-in-right 2s linear;
+        }
+
+        @keyframes bounce-in-right {
+        0% {
+            opacity: 0;
+            transform: translateX(2000px);
+        }
+        60% {
+            opacity: 1;
+            transform: translateX(-30px);
+        }
+        80% { transform: translateX(10px); }
+        100% { transform: translateX(0); }
+        }
+
+        .bounce-in {
+            animation: bounce-in 2s linear;
+        }
+
+        @keyframes bounce-in {
+        0% {
+            opacity: 0;
+            transform: scale(.3);
+        }
+        50% {
+            opacity: 1;
+            transform: scale(1.05);
+        }
+        70% { transform: scale(.9); }
+        100% { transform: scale(1); }
+        }
+    }
+
+}

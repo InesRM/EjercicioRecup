@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ejercicio Recuperacion</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body class="bg-image-detalle" style="
+  background-image: url('../assets/img/cielo-azul-claro.jpg');
+  height: 100vh;">
+    <div class="btn-volver">
+      <a href="./pruebas.html"><button class="volver"><i class="fa fa-arrow-left" aria-hidden="true"></i> Volver</button></a>
+    </div>
+    <!-- <div class="proceso">
+      <div>
+        <a href="pruebas.html"><button type="button" class="btn btn-primary btn-lg mb-2 p-3 activa">1</button></a>
+        <p>Selección</p>
+      </div>
+      <div>
+        <button type="button" class="btn btn-primary btn-lg mb-2 p-3 crear activa">2</button>
+        <p>Creación</p>
+      </div>
+    </div> -->
+    <div class="contenedor">
+        <div>
+            <div class="titulos mb-4">
+              <h1 class="mb-3">Elección</h1>
+              <h6 class="mb-4">Escribe una pregunta con dos respuesta, una correcta y otra falsa</h6>
+            </div>
+            <form class="list-group eleccion" id="formulario" novalidate>
+                <p class="mb-3">Pregunta</p>
+                <div class="form-check mb-3">
+                    <input class="form-control mb-3 pregunta" name="pregunta" type="text" placeholder="Escribe aquí tu pregunta" required>
+                    <span class="errorpregunta"></span>
+                </div>
+                <p class="mb-3">Respuestas</p>
+                <div class="form-check mb-3">
+                    <label class="mb-2">Correcta : </label>
+                    <input class="form-control respuesta" name="correcta" type="text" placeholder="Si" required>
+                </div>
+                <div class="form-check mb-3">
+                    <label class="mb-2">Incorrecta : </label>
+                    <input class="form-control respuesta mb-3" name="incorrecta" type="text" placeholder="No" required>
+                    <span class="errorespuesta"></span>
+                    <span class="erroradio"></span>
+                </div>
+                <p class="mb-3">Atributo</p>
+                <div class="form-check mb-3">
+                    <label>Habilidad : 
+                        <select name="habilidad" class="form-select habilidad mt-2 mb-2" required>
+                        <option></option>
+                        <option value="sabiduria">Sabiduría</option>
+                        <option value="nobleza">Nobleza</option>
+                        <option value="virtud">Virtud</option>
+                        <option value="maldad">Maldad</option>
+                        <option value="audacia">Audacia</option>
+                        </select>
+                    </label>
+                    <span class="errorhabilidad mb-2"></span>
+                </div>
+                <p class="mb-3">Cantidad de Destino</p>
+                <div class="form-check mb-3">
+                    <input name = "destino" class="form-control destino mb-3" type="number" placeholder="0" required max="100" min="0" minlength="1" maxlength="3">
+                    <span class="errordestino"></span>
+                </div>
+                <div class="confirmar mb-5">
+                    <button type="submit" class="btn btn-primary btn-lg mt-4">Crear</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="modal" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content contenedor-modal">
+          
+        </div>
+      </div>
+    </div>
+    <footer class="bottom">
+      <span>@Ejercicio Recuperacion</span>
+    </footer>
+  </body>
+</html>

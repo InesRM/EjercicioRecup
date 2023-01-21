@@ -1,0 +1,563 @@
+@-webkit-keyframes movericonos {
+  from {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(30deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+@keyframes movericonos {
+  from {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(30deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+@-webkit-keyframes cambiarcolor {
+  from {
+    color: #baefe5;
+  }
+  50% {
+    color: #ab5cf9;
+  }
+  to {
+    color: #baefe5;
+  }
+}
+@keyframes cambiarcolor {
+  from {
+    color: #baefe5;
+  }
+  50% {
+    color: #ab5cf9;
+  }
+  to {
+    color: #baefe5;
+  }
+}
+@keyframes movericonos {
+  from {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(30deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+@keyframes cambiarcolor {
+  from {
+    color: #baefe5;
+  }
+  50% {
+    color: #ab5cf9;
+  }
+  to {
+    color: #baefe5;
+  }
+}
+@keyframes movericonos {
+  from {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(30deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+@keyframes cambiarcolor {
+  from {
+    color: #baefe5;
+  }
+  50% {
+    color: #ab5cf9;
+  }
+  to {
+    color: #baefe5;
+  }
+}
+.container {
+  padding: 0;
+}
+.container .container-info {
+  margin: 4vh auto 3vh auto;
+}
+.container .container-info .crear-prueba {
+  float: right;
+}
+.container .container-info .crear-prueba, .container .container-info .volver {
+  background: linear-gradient(to bottom right, #cfd9df, #e2ebf0);
+  border-radius: 5vh;
+  border: none;
+  width: 40%;
+  font-size: 12pt;
+  padding: 1vh;
+  color: white;
+  font-weight: 500;
+}
+.container .container-info .crear-prueba:hover, .container .container-info .volver:hover {
+  background: linear-gradient(to bottom right, #ab5cf9, #baefe5);
+  transition: all 0.5s;
+}
+.container .container-info .crear-prueba:hover:hover, .container .container-info .volver:hover:hover {
+  transform: scale(1.08);
+}
+.container .container-info .volver {
+  float: left;
+}
+.container .tabla {
+  margin-bottom: 5vh;
+}
+.container .tabla .tabla-header li {
+  padding: 0;
+  margin: auto;
+}
+.container .tabla .tabla-header li a {
+  padding: 0;
+  margin: auto;
+  color: #000;
+  font-size: 14pt;
+  font-weight: 500;
+}
+.container .tabla .contenedor-tabla, .container .tabla .contenedor-tabla-usuarios {
+  overflow-y: scroll;
+  height: 58vh;
+  font-size: 12pt;
+}
+.container .tabla .contenedor-tabla .card-body div div, .container .tabla .contenedor-tabla-usuarios .card-body div div {
+  margin: 0;
+  padding: 0;
+}
+.container .tabla .contenedor-tabla .card-body div .acciones, .container .tabla .contenedor-tabla-usuarios .card-body div .acciones {
+  text-align: center;
+  margin: auto;
+}
+.container .tabla .contenedor-tabla .card-body div .acciones i, .container .tabla .contenedor-tabla-usuarios .card-body div .acciones i {
+  cursor: pointer;
+  color: #cfd9df;
+  font-size: 16pt;
+}
+.container .tabla .contenedor-tabla .card-body div .acciones i:hover, .container .tabla .contenedor-tabla-usuarios .card-body div .acciones i:hover {
+  color: #ab5cf9;
+  transition: all 0.5s;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-name: movericonos;
+          animation-name: movericonos;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+.container .tabla .contenedor-tabla .card-body div .acciones i:hover:hover, .container .tabla .contenedor-tabla-usuarios .card-body div .acciones i:hover:hover {
+  transform: scale(1.08);
+}
+.container .tabla .contenedor-tabla-usuarios .card-body:hover .fa-user {
+  transition: 0.5s all;
+  font-size: 16pt;
+}
+.container .tabla .contenedor-tabla-usuarios .card-body:hover .fa-user {
+  -webkit-animation: cambiarcolor 1s infinite;
+          animation: cambiarcolor 1s infinite;
+}
+.container .tabla .contenedor-tabla::-webkit-scrollbar, .container .tabla .contenedor-tabla-usuarios::-webkit-scrollbar {
+  width: 8px;
+  background-color: rgb(246, 246, 246);
+}
+.container .tabla .contenedor-tabla::-webkit-scrollbar-thumb, .container .tabla .contenedor-tabla-usuarios::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom right, #cfd9df, #e2ebf0);
+  border-radius: 4px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  height: 100vh;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.modal .modal-dialog {
+  margin-top: 20vh;
+}
+.modal .modal-dialog .contenedor-modal .modal-header {
+  background: linear-gradient(to bottom right, #ab5cf9, #baefe5);
+}
+.modal .modal-dialog .contenedor-modal .modal-body .card .card-header h6 {
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+.modal .modal-dialog .contenedor-modal .modal-body .card .card-header .form-select {
+  width: 50%;
+}
+.modal .modal-dialog .contenedor-modal .modal-body .card .lista-candidatos {
+  height: 37vh;
+  overflow-y: scroll;
+}
+.modal .modal-dialog .contenedor-modal .modal-body .card .lista-candidatos .card .card-body p {
+  margin: 0;
+}
+.modal .modal-dialog .contenedor-modal .modal-body .card .lista-usuarios {
+  height: 54vh;
+  overflow-y: scroll;
+}
+.modal .modal-dialog .contenedor-modal .modal-body .card .lista-usuarios .card .card-body p {
+  margin: 0;
+}
+.modal .modal-dialog .contenedor-modal .modal-footer button {
+  background: linear-gradient(to bottom right, #cfd9df, #e2ebf0);
+  border-radius: 10vh;
+  border: none;
+  width: 28%;
+  margin-left: 1rem;
+  padding: 0.3rem;
+  font-size: 12pt;
+}
+.modal .modal-dialog .contenedor-modal .modal-footer button:hover {
+  background: linear-gradient(to bottom right, #ab5cf9, #baefe5);
+  transition: all 0.5s;
+}
+.modal .modal-dialog .contenedor-modal .modal-footer button:hover:hover {
+  transform: scale(1.08);
+}
+
+.proceso {
+  display: flex;
+  justify-content: space-around;
+  margin: 10vh auto 8vh auto;
+}
+.proceso div button {
+  background: linear-gradient(to bottom right, #cfd9df, #e2ebf0);
+  border-radius: 10vh;
+  border: none;
+  font-size: 20pt;
+  width: 10vh;
+}
+.proceso div .activa {
+  background: linear-gradient(to bottom right, #ab5cf9, #baefe5);
+}
+.proceso div p {
+  font-weight: 300;
+  text-align: center;
+}
+
+.contenedor, .contenedor-prueba {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10vh;
+}
+.contenedor .titulos, .contenedor-prueba .titulos {
+  border-bottom: 1px solid #cfd9df;
+}
+.contenedor h6, .contenedor-prueba h6 {
+  font-weight: 400;
+}
+.contenedor .list-group, .contenedor-prueba .list-group {
+  width: 58vh;
+}
+.contenedor .list-group p, .contenedor-prueba .list-group p {
+  font-weight: 500;
+  font-size: 14pt;
+}
+.contenedor .list-group button, .contenedor-prueba .list-group button {
+  background: linear-gradient(to bottom right, #cfd9df, #e2ebf0);
+  border-radius: 10vh;
+  border: none;
+  width: 80%;
+  font-size: 12pt;
+}
+.contenedor .list-group .confirmar, .contenedor-prueba .list-group .confirmar {
+  text-align: center;
+}
+.contenedor .list-group .confirmar button, .contenedor-prueba .list-group .confirmar button {
+  width: 30%;
+}
+.contenedor .list-group button:hover, .contenedor-prueba .list-group button:hover {
+  background: linear-gradient(to bottom right, #ab5cf9, #baefe5);
+  transition: all 0.5s;
+  transform: skewX(30deg);
+}
+.contenedor .list-group button:hover:hover, .contenedor-prueba .list-group button:hover:hover {
+  transform: scale(1.08);
+}
+.contenedor .list-group span, .contenedor-prueba .list-group span {
+  font-size: 10pt;
+  font-weight: 300;
+  color: rgb(226, 59, 59);
+  display: block;
+}
+.contenedor .list-group select, .contenedor-prueba .list-group select {
+  width: 55vh;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  height: 100vh;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.modal .modal-dialog {
+  margin-top: 20vh;
+}
+.modal .modal-dialog .contenedor-modal .modal-header {
+  background: linear-gradient(to bottom right, #ab5cf9, #baefe5);
+  color: white;
+}
+.modal .modal-dialog .contenedor-modal .modal-footer a {
+  margin-right: 1.5rem;
+}
+.modal .modal-dialog .contenedor-modal .modal-footer a button {
+  background: linear-gradient(to bottom right, #cfd9df, #e2ebf0);
+  border-radius: 10vh;
+  border: none;
+  width: 100%;
+  padding: 0.5rem 2rem;
+  margin-right: 1rem;
+  font-size: 12pt;
+  color: white;
+}
+.modal .modal-dialog .contenedor-modal .modal-footer a button:hover {
+  background: linear-gradient(to bottom right, #ab5cf9, #baefe5);
+  transition: all 0.5s;
+}
+.modal .modal-dialog .contenedor-modal .modal-footer a button:hover:hover {
+  transform: scale(1.08);
+}
+
+body footer {
+  margin-top: 1vh;
+  padding: 1vh;
+  text-align: center;
+  background: linear-gradient(to bottom right, #ab5cf9, #baefe5);
+  color: white;
+}
+body .contenedorRegistro {
+  background: linear-gradient(to bottom right, #ab5cf9, #baefe5);
+  color: white;
+}
+body .boton button {
+  background: linear-gradient(to bottom right, #cfd9df, #e2ebf0);
+  border-radius: 10vh;
+  border: none;
+  width: 80%;
+  font-size: 12pt;
+}
+body .boton button:hover {
+  background: linear-gradient(to bottom right, #ab5cf9, #baefe5);
+  transition: all 0.5s;
+}
+body .boton button:hover:hover {
+  transform: scale(1.08);
+}
+body .animado {
+  -webkit-animation: div_animado 3s linear;
+          animation: div_animado 3s linear;
+}
+@-webkit-keyframes div_animado {
+  0% {
+    transform: rotate(0deg);
+    left: 0px;
+  }
+  25% {
+    transform: rotate(20deg);
+    left: 0px;
+  }
+  50% {
+    transform: rotate(0deg);
+    left: 0px;
+  }
+}
+@keyframes div_animado {
+  0% {
+    transform: rotate(0deg);
+    left: 0px;
+  }
+  25% {
+    transform: rotate(20deg);
+    left: 0px;
+  }
+  50% {
+    transform: rotate(0deg);
+    left: 0px;
+  }
+}
+
+#modalRegistro {
+  padding-top: 20%;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+
+.modalContent {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 5%;
+  border: 1px, solid #888;
+  width: 80%;
+}
+
+.close {
+  color: #aaaaaa;
+  float: right;
+  margin-bottom: 50%;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover, .close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.cabecera {
+  background: linear-gradient(to bottom right, #ab5cf9, #baefe5);
+  color: white;
+}
+.cabecera img {
+  width: 4%;
+  -webkit-animation: giro 5s linear infinite;
+          animation: giro 5s linear infinite;
+}
+
+@-webkit-keyframes giro {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes giro {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.navbar {
+  justify-content: center;
+  text-align: center;
+}
+.navbar img {
+  margin: 1%;
+}
+.navbar h2 {
+  margin-right: 6%;
+}
+
+.btn-volver .volver {
+  background: linear-gradient(to bottom right, #cfd9df, #e2ebf0);
+  border-radius: 5vh;
+  border: none;
+  width: 12%;
+  font-size: 12pt;
+  padding: 1vh;
+  color: white;
+  font-weight: 500;
+  margin: 3vh 4%;
+}
+.btn-volver .volver:hover {
+  background: linear-gradient(to bottom right, #ab5cf9, #baefe5);
+  transition: all 0.5s;
+}
+.btn-volver .volver:hover:hover {
+  transform: scale(1.08);
+}
+
+.contenedor {
+  display: flex;
+  justify-content: center;
+  margin-top: 10vh;
+}
+.contenedor .titulos {
+  border-bottom: 1px solid grey;
+}
+.contenedor h6 {
+  font-weight: 400;
+}
+.contenedor .list-group {
+  display: flex;
+  justify-content: center;
+  width: 58vh;
+}
+.contenedor .list-group a {
+  all: unset;
+}
+.contenedor .list-group p {
+  font-weight: 500;
+  font-size: 14pt;
+}
+.contenedor .list-group button {
+  background: linear-gradient(to bottom right, #cfd9df, #e2ebf0);
+  border-radius: 10vh;
+  border: none;
+  width: 80%;
+  font-size: 12pt;
+}
+.contenedor .list-group .confirmar {
+  text-align: center;
+}
+.contenedor .list-group .confirmar button {
+  width: 30%;
+}
+.contenedor .list-group button:hover {
+  background: linear-gradient(to bottom right, #ab5cf9, #baefe5);
+  transition: all 0.5s;
+}
+.contenedor .list-group button:hover:hover {
+  transform: scale(1.08);
+}
+.contenedor .list-group span {
+  font-size: 10pt;
+  font-weight: 300;
+  color: rgb(226, 59, 59);
+  display: block;
+}
+.contenedor .list-group select {
+  width: 55vh;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  background: linear-gradient(to bottom right, #ab5cf9, #baefe5);
+}
+
+input[type=range]::-moz-range-thumb {
+  background: linear-gradient(to bottom right, #ab5cf9, #baefe5);
+}
+
+input[type=range]::-ms-thumb {
+  background: linear-gradient(to bottom right, #ab5cf9, #baefe5);
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  background: linear-gradient(to bottom right, #cfd9df, #e2ebf0);
+}
+
+input[type=range]::-moz-range-track {
+  background: linear-gradient(to bottom right, #cfd9df, #e2ebf0);
+}
+
+input[type=range]::-ms-track {
+  background: linear-gradient(to bottom right, #cfd9df, #e2ebf0);
+}
+
+.volver {
+  width: 10%;
+}/*# sourceMappingURL=styles.css.map */

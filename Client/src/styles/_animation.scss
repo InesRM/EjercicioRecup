@@ -1,0 +1,30 @@
+@mixin zoom(){
+    &:hover{
+        transform: scale(1.08);
+    }
+}
+
+@mixin rotar(){
+    animation-duration: 2s;
+    animation-name: movericonos;
+    animation-iteration-count: infinite;
+        
+}
+
+@keyframes movericonos {
+    from{ transform: rotate(0deg)}
+    50% {transform: rotate(30deg)}
+    to {transform: rotate(0deg)}
+  }
+
+@mixin color(){
+    &{
+        animation: cambiarcolor 1s infinite;
+    }
+}
+
+@keyframes cambiarcolor {
+    from{ color: #baefe5;}
+    50% {color: #ab5cf9;}
+    to {color: #baefe5;}
+}

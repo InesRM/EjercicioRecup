@@ -1,0 +1,48 @@
+@mixin cabecera($tema) {
+    .cabecera{
+        background: map.get($tema,"colorPrimario");
+        color: map.get($tema,"colorLetraBlanco");
+        img {
+            width: 4%;
+            animation: giro 5s linear infinite;
+        }
+    }
+
+    @keyframes giro {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+    .navbar {
+        img {
+            margin: 1%;
+        }
+        h2 {
+            margin-right: 6%;
+        }
+        justify-content: center;
+        text-align: center;
+    }
+    .btn-volver{
+        .volver{
+            background: map.get($tema,"colorSecundario");
+            border-radius: 5vh;
+            border: none;
+            width: 12%;
+            font-size: map-get($tema, "texto");
+            padding: 1vh;
+            color: white;
+            font-weight: map.get($tema,"pesoMedium");
+            margin: 3vh 4%;
+            &:hover{
+                background: map.get($tema,"colorPrimario");
+                transition: all 0.5s;
+                @include zoom();
+            }
+        }
+    }
+}

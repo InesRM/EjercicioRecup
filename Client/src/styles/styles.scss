@@ -1,0 +1,49 @@
+@use "sass:map";
+@import "~bootstrap/scss/bootstrap";
+@import "animation", 'tabla', 'pruebas', 'registro'; 
+@import 'modalRegistro', 'cabecera', "contenedor", "range";
+
+$tema:(
+    "colorPrimario": linear-gradient(to bottom right,  #4d1c7e, #baefe5),
+    "colorSecundario": linear-gradient(to bottom right,  #c8ade6, #a075b0),
+    "colorBase" : #cfd9df,
+    "colorBaseHover" : #5c0cac,
+    "pesoBold":700,
+    "pesoSemiBold":600,
+    "pesoMedium":500,
+    "pesoRegular":400,
+    "pesoLight":300,
+    "error" : 10pt,
+    "texto" : 12pt,
+    "categoria" : 14pt,
+    "tamPasos" : 20pt,
+    "iconos" : 16pt,
+    "sombra":rgba(0, 0, 0, 0.6),
+    "colorLetraBlanco": white,
+);
+
+@include tabla($tema);
+@include pruebas($tema);
+@include registro($tema);
+@include modalRegistro($tema);
+@include cabecera($tema);
+@include contenedor($tema);
+@include range($tema);
+
+
+.volver {
+    width: 10%;
+}
+
+.bg-image{
+    height: 100%;
+    direction: ltr;
+    background:url(../assets/img/webpack-logo.png);
+    background-size:100% 100%;
+    background-repeat:no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    overflow: hidden;
+
+}
+

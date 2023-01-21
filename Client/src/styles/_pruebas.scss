@@ -1,0 +1,113 @@
+@import "animation";
+@mixin pruebas($tema) {
+    .proceso{
+        display: flex;
+        justify-content: space-around;
+        margin: 10vh auto 8vh auto;
+
+        div{
+            button{
+                background: map.get($tema,"colorSecundario");
+                border-radius: 10vh;
+                border: none;
+                font-size: map.get($tema,"tamPasos"); 
+                width: 10vh; 
+            }
+            .activa{
+                background: map.get($tema,"colorPrimario");
+                &:hover{
+                    transition: all 0.5s;
+                    transform: skewX(10deg);
+                }   
+            }
+            p{
+                font-weight: map.get($tema,"pesoLight");
+                text-align: center;
+            }
+        }    
+    }
+
+    .contenedor, .contenedor-prueba{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 10vh;
+        .titulos{
+            border-bottom: 1px solid map.get($tema,"colorBase");
+        }
+        h6{
+            font-weight: map.get($tema,"pesoRegular");
+        }
+        .list-group{
+            width: 58vh;
+            p{
+                font-weight: map.get($tema,"pesoMedium");
+                font-size: map.get($tema,"categoria");
+            }
+            button{
+                background: map.get($tema,"colorSecundario");
+                border-radius: 10vh;
+                border: none;
+                width: 80%;
+                font-size: map-get($tema, "texto");
+            }
+            .confirmar{
+                text-align: center;
+                button{
+                    width: 30%;
+                }
+            }
+            button:hover{
+                background: map.get($tema,"colorPrimario");
+                transition: all 0.5s;
+                @include zoom();
+                transform: skewX(30deg);
+            }
+            span{
+                font-size: map-get($tema, "error");
+                font-weight: map.get($tema,"pesoLight");
+                color: rgb(226, 59, 59);
+                display: block;
+            }
+            select{
+                width: 55vh;
+            }
+        }
+    }
+    .modal{
+        display: none;
+        position: fixed; 
+        z-index: 1; 
+        height: 100vh;
+        overflow: auto; 
+        background-color: map.get($tema,"sombra"); 
+        .modal-dialog{
+            margin-top: 20vh;
+            .contenedor-modal{
+                .modal-header{
+                    background: map.get($tema,"colorPrimario");
+                    color: white;
+                }
+                .modal-footer{
+                    a{
+                        margin-right: 1.5rem;
+                        button{
+                            background: map.get($tema,"colorSecundario");
+                            border-radius: 10vh;
+                            border: none;
+                            width: 100%;
+                            padding: 0.5rem 2rem;
+                            margin-right: 1rem;
+                            font-size: map-get($tema, "texto"); 
+                            color: white;
+                            &:hover{
+                                background: map.get($tema,"colorPrimario");
+                                transition: all 0.5s;
+                                @include zoom();
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

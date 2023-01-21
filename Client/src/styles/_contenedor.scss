@@ -1,0 +1,52 @@
+@mixin contenedor ($tema) {
+    .contenedor {
+        display: flex;
+        justify-content: center;
+        margin-top: 10vh;
+        .titulos{
+            border-bottom: 1px solid grey;
+        }
+        h6{
+            font-weight: 400;
+        }
+        .list-group{
+            display: flex;
+            justify-content: center;
+            width: 58vh;
+            a {
+                all: unset;
+            }
+            p{
+                font-weight: 500;
+                font-size: 14pt;
+            }
+            button{
+                background: map.get($tema,"colorSecundario");
+                border-radius: 10vh;
+                border: none;
+                width: 80%;
+                font-size: 12pt;
+            }
+            .confirmar{
+                text-align: center;
+                button{
+                    width: 30%;
+                }
+            }
+            button:hover{
+                background: map.get($tema,"colorPrimario");
+                transition: all 0.5s;
+                @include zoom();
+            }
+            span{
+                font-size: 10pt;
+                font-weight: 300;
+                color: rgb(226, 59, 59);
+                display: block;
+            }
+            select{
+                width: 55vh;
+            }
+        }
+    }
+}

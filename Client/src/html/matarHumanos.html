@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Ejercicio Recuperacion</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body class="bg-image-detalle" style="
+    background-image: url('../assets/img/cielo2.jpg');
+    height: 100vh;">
+        <div class="btn-volver">
+            <a href="javascript:history.back()"><button class="volver"><i class="fa fa-arrow-left" aria-hidden="true"></i> Volver</button></a>
+        </div>
+        <div class="vh-100 d-flex justify-content-center align-items-center formulario">
+            <div class="bg-light col-md-4  shadow-sm border rounded-3">
+            <div class="p-5 border rounded-3 contenedorRegistro">
+                <h2 class="text-center mb-4">Eliminar Humanos</h2>
+            </div>
+            <form class="p-5" id="eliminator">
+                <div class="mb-4">
+                    <label class="form-label">Identificador</label>
+                    <input type="text" class="form-control area-texto id" name="id" required>
+                </div>
+                <div class="mb-4 d-grid gap-2 col-6 mx-auto boton">
+                    <button class="btn btn-primary" type="submit">Eliminar Humanos</button>
+                </div>
+            </form>
+            </div>
+        </div>
+        <div id="modalRegistro" class="modal">
+            <div class="modalContent">
+                <span class="close">×</span>
+                <p id="parrafo"></p>
+            </div>
+        </div>
+        <footer class="bottom">
+            <span>Ejercicio Recuperacion</span>
+        </footer>
+    </body>
+</html>
