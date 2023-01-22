@@ -9,7 +9,9 @@ const protectionP = document.querySelector('.protection');
 let avatar = document.querySelector('#avatar');
 let tBody = document.querySelector('tbody');
 let file = document.getElementById('file');
-const url = "http://localhost:8000/public/"; 
+const body = document.body;
+let inputFile, imgFoto;
+let url="http://127.0.0.1:8000/public";
 
 export const init = () => {
     getAttributes(id).then(result => {
@@ -27,13 +29,28 @@ export const initProtection = () => {
 }
  
 export const initAvatar = () => {   
-mostrarAvatar(); 
+ getAvatar(id).then(result=> {
+    avatar.src = `${url}${result}`
+    console.log(result.avatar);
+    crearFilaAvatar(result.avatar);
+ }
+    )
 
 }
 
-// export const initUpdateAvatar = () => {
-//     updateImage(id, formData);
-// }
+const crearFilaAvatar =() =>{
+    const html=`
+    <tr>
+    <th scope="col"> ${`${url}${foto}`}</th> 
+    </tr>  
+    `
+    const div = document.createElement('div');
+    div.innerHTML = html;
+    body.appendChild( div );
+    inputFile = document.querySelector('input');
+    imgFoto = document.querySelector('#foto');
+
+}
 
 
 const crearFilaAtributos = (attributes) => {
@@ -85,13 +102,13 @@ const agregarProtection = () => {
 //
 // Compare this snippet from src\js\detallesHumano.js:
 
-const mostrarAvatar = () => {
-    getAvatar(id).then(result => {
-        console.log(result)
-        avatar.src = `${url}${result}`;       
-    })
+// const mostrarAvatar = () => {
+//     getAvatar(id).then(result => {
+//         console.log(result)
+//         crearFilaAtributos(result.avatar);   
+//     })
     
-}
+// }
 
 
 

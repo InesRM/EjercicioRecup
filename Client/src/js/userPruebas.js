@@ -1,2 +1,2 @@
-import {init} from './pruebasAsignadas.js';
-init();
+import {crearModalAsignar} from './pruebasAsignadas.js';
+crearModalAsignar();
