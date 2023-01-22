@@ -1,5 +1,5 @@
 {
-  "name": "Recuperacion",
+  "name": "EjercicioRecup",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -11,15 +11,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/InesRM/Recuperacion.git"
+    "url": "git+https://github.com/InesRM/EjercicioRecup"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/InesRM/Recuperacion/issues"
+    "url": "https://github.com/InesRM/EjercicioRecup/issues"
   },
-  "homepage": "https://github.com/InesRM/Recuperacion#readme",
+  "homepage": "https://github.com/InesRM/EjercicioRecup/#readme",
   "devDependencies": {
     "@babel/core": "^7.19.3",
     "@babel/preset-env": "^7.19.3",
