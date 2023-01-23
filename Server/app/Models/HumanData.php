@@ -8,7 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class HumanData extends Model
 {
     use HasFactory;
-
     protected $fillable = [
         'ID',
         'destino',

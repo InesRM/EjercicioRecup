@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('atributes_users', function (Blueprint $table) {
-            $table->id();
+            $table->primary(['atributeID', 'userID']);
             $table->unsignedBigInteger('atributeID');
             $table->foreign('atributeID')->references('ID')->on('atributes')->onDelete('cascade');
             $table->unsignedBigInteger('userID');

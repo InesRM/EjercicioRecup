@@ -44,13 +44,13 @@ class ImageUploadController extends Controller
         }
     }
 
-
     function updateStore(Request $request)
     {
         $this->validate($request, [
             'file' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048',
         ]);
         try {
+            $id= $request->id;
             $user = User::get()->last()->id;
             $file = $request->file('file');
             $name = time() . $file->getClientOriginalName();
@@ -69,20 +69,15 @@ class ImageUploadController extends Controller
         }
     }
 
-
-
-    // function getAvatar($id)
-    // {
-    //     $user = User::find($id);
-    //     $avatar=$user->avatar;
-    //     return response()->json(['avatar' => $avatar], 200);
-    // }
     function getAvatar($id)
     {
         $user = User::find($id);
-        $url = Storage::url($user->avatar);
-        $avatar = asset($url);
-        return response()->json(['avatar' => $avatar], 200);
+        $avatar = $user->avatar;
+        $resource=Storage::disk('public')->get($avatar);
+        return Response::make($resource, 200, [
+            'Content-Type' => 'image/jpeg',
+            'Content-Disposition' => 'inline; filename="'.$avatar.'"'
+        ]);
     }
 
     function destroy(File $file)
@@ -91,7 +86,6 @@ class ImageUploadController extends Controller
         return new UserResource($file);
     }
     }
-
 
 
 

@@ -11,6 +11,7 @@ init();
 initDestino();
 initProtection();
 initAvatar();
+
 // initUpdateAvatar();
 
 

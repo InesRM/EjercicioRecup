@@ -98,9 +98,16 @@ class UserController extends Controller
         return response()->json(["success"=>true, "attributes" => $atributes],200);
     }
 
-    public function get($id) {
+   public function getUser ($id) {
         $user = User::find($id);
         return response()->json(["success"=>true, "user" => $user],200);
     }
+
+    public function getFiles ($id) {
+        $files = File::where('userID', $id)->get();
+        return response()->json(["success"=>true, "files" => $files],200);
+    }
+
+
 
 }

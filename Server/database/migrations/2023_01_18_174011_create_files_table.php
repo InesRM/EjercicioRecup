@@ -20,12 +20,8 @@ return new class extends Migration
             $table->string('name');
             $table->string('url');
             $table->timestamps();
-
-    });
-
-
-}
-
+        });
+    }
 
     /**
      * Reverse the migrations.

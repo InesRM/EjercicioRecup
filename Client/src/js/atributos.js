@@ -11,7 +11,7 @@ let tBody = document.querySelector('tbody');
 let file = document.getElementById('file');
 const body = document.body;
 let inputFile, imgFoto;
-let url="http://127.0.0.1:8000/public";
+
 
 export const init = () => {
     getAttributes(id).then(result => {
@@ -30,27 +30,9 @@ export const initProtection = () => {
  
 export const initAvatar = () => {   
  getAvatar(id).then(result=> {
-    avatar.src = `${url}${result}`
-    console.log(result.avatar);
-    crearFilaAvatar(result.avatar);
- }
-    )
-
-}
-
-const crearFilaAvatar =() =>{
-    const html=`
-    <tr>
-    <th scope="col"> ${`${url}${foto}`}</th> 
-    </tr>  
-    `
-    const div = document.createElement('div');
-    div.innerHTML = html;
-    body.appendChild( div );
-    inputFile = document.querySelector('input');
-    imgFoto = document.querySelector('#foto');
-
-}
+ 
+    })
+};
 
 
 const crearFilaAtributos = (attributes) => {
@@ -86,31 +68,3 @@ const agregarProtection = () => {
 
 
  
-// const updateImage = (id, formData) => {
-// file.addEventListener('change', (event) => {
-//     const file = event.target.files[0];
-//     const formData = new FormData();
-//     formData.append('avatar', file);
-//     updateAvatar(id, formData).then(result => {
-//         console.log(result);
-//         avatar.src = `${url}${result}`;
-//     })
-// })
-// }
-
-// Language: javascript
-//
-// Compare this snippet from src\js\detallesHumano.js:
-
-// const mostrarAvatar = () => {
-//     getAvatar(id).then(result => {
-//         console.log(result)
-//         crearFilaAtributos(result.avatar);   
-//     })
-    
-// }
-
-
-
-
-

@@ -19,7 +19,7 @@ class AtributesFactory extends Factory
     {
         return [
 
-            'name' => $this->faker->randomElement(['sabiduria', 'nobleza', 'virtud', 'maldad', 'audacia']),
+            'name' => $this->faker->unique->randomElement(['sabiduria', 'nobleza', 'virtud', 'maldad', 'audacia']),
 
         ];
     }

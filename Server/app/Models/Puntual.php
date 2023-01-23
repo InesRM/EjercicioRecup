@@ -5,10 +5,9 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Puntual extends Prueba
+class Puntual extends Model
 {
     use HasFactory;
-
     protected $table = 'puntual';
     protected $primaryKey = 'idprueba';
     public $incrementing = false;

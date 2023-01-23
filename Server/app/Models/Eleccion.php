@@ -5,9 +5,9 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Eleccion extends Prueba
+class Eleccion extends Model
 {
-
+    use HasFactory;
     protected $table = 'eleccion';
     protected $primaryKey = 'idprueba';
     public $incrementing = false;
@@ -25,5 +25,4 @@ class Eleccion extends Prueba
     public function prueba(){
         return $this->belongsTo('App\Models\Prueba', 'idprueba', 'id');
     }
-
 }

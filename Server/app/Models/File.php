@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Storage;
+
 class File extends Model
 {
     protected $table = 'files';
@@ -26,4 +27,5 @@ class File extends Model
     {
         return $this->belongsTo(User::class);
     }
+//
 }

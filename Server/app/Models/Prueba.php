@@ -8,7 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Prueba extends Model
 {
     use HasFactory;
-
     protected $table = 'prueba';
     protected $primaryKey = 'id';
     public $incrementing = true;
@@ -36,6 +35,5 @@ class Prueba extends Model
     public function pruebaPuntual(){
         return $this->belongsTo('App\Models\Puntual','id','idprueba');
     }
-
 
 }

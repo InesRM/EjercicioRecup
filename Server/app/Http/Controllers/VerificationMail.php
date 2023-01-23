@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 
 class VerificationMail extends Controller{
-    static public function sendMail($email, $userName){
+    public function sendMail($email, $userName){
         $data = [
             'userName' => $userName,
             'email' => $email,

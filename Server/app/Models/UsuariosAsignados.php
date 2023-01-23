@@ -8,7 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class UsuariosAsignados extends Model
 {
     use HasFactory;
-
     protected $table = 'usuarios_asignados';
     protected $primaryKey = ['idprueba','idusuario'];
     public $incrementing = false;
@@ -19,4 +18,5 @@ class UsuariosAsignados extends Model
         'idprueba',
         'idusuario'
     ];
+
 }
