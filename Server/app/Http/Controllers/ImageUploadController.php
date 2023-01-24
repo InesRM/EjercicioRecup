@@ -26,6 +26,7 @@ class ImageUploadController extends Controller
             'file' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048',
         ]);
         try {
+            $id= $request->id;
             $user = User::get()->last()->id;
             $file = $request->file('file');
             $name = time() . $file->getClientOriginalName();
