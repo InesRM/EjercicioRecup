@@ -52,7 +52,7 @@ class AsignarController extends Controller
         return response()->json($vecUsuarios,200);
     }
 
-   static public function humanosAfines($idprueba, $id){
+   public function humanosAfines($idprueba, $id){
         $atributo = AsignarController::conseguirAtributo($idprueba);
         if($atributo != null){
             $idAtributo = Atributes::select('ID')->where('name',$atributo)->first();
