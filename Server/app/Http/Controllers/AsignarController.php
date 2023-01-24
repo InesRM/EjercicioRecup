@@ -25,7 +25,7 @@ class AsignarController extends Controller
         return response()->json($user,200);
     }
 
-    public function getUsuariosProtegidos($id, $idprueba) {
+   static public function getUsuariosProtegidos($id, $idprueba) {
         $usuarios = HumanData::select('ID')->where('protection',$id)->get();
         $iduser = UsuariosAsignados::select('idusuario')->where('idprueba', $idprueba)->get();
         $user = User::with(['humanosProtegidos'])
@@ -36,7 +36,7 @@ class AsignarController extends Controller
     }
 
 
-    public function getUsuariosAfines($id,$idprueba){
+   public function getUsuariosAfines($id,$idprueba){
         $vecUsuarios = [];
         $iduser = UsuariosAsignados::select('idusuario')->where('idprueba', $idprueba)->get();
         $idUsuarios = AsignarController::humanosAfines($idprueba, $id);
@@ -52,7 +52,7 @@ class AsignarController extends Controller
         return response()->json($vecUsuarios,200);
     }
 
-    public function humanosAfines($idprueba, $id){
+   static public function humanosAfines($idprueba, $id){
         $atributo = AsignarController::conseguirAtributo($idprueba);
         if($atributo != null){
             $idAtributo = Atributes::select('ID')->where('name',$atributo)->first();

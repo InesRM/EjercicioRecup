@@ -4,6 +4,8 @@ import '../styles/styles.scss'
 // Import all of Bootstrap JS
 import * as bootstrap from 'bootstrap'
 
-import { init } from './atributos'
+import { init, initAvatar } from './atributos'
+
 
 init();
+initAvatar();
