@@ -6,12 +6,13 @@ const destino = data.destino;
 const protection = data.protection;
 const destinoP = document.querySelector('.destino');
 const protectionP = document.querySelector('.protection');
-let avatar = document.querySelector('#avatar');
+let avatarP = document.querySelector('#avatar');
 let tBody = document.querySelector('tbody');
 let file = document.getElementById('file');
 const body = document.body;
+const img = document.querySelector('.img-thumbnail');
 let inputFile, imgFoto;
-
+let url="http://localhost:8000/api/image/getAvatar/"+id;
 
 export const init = () => {
     getAttributes(id).then(result => {
@@ -28,12 +29,10 @@ export const initProtection = () => {
     agregarProtection();
 }
  
-export const initAvatar = () => {   
- getAvatar(id).then(result=> {
- 
-    })
-};
+export const initAvatar = () => {
 
+agregarAvatar(getAvatar(id));
+}
 
 const crearFilaAtributos = (attributes) => {
     const html = `
@@ -64,6 +63,22 @@ const agregarProtection = () => {
         protectionP.innerHTML = `Tu protector es el dios : ${protection}, Zeus`;
     }
    
+}
+
+const agregarAvatar = (img) => {
+    imgFoto = document.createElement('img');
+    imgFoto.src = url;
+    imgFoto.classList.add('img-thumbnail');
+    avatarP.appendChild(imgFoto);
+
+    file.addEventListener('change', (e) => {
+        const file = e.target.files[0];
+        const url = URL.createObjectURL(file);
+        imgFoto
+        img
+        img.src = url;
+    })
+        
 }
 
 

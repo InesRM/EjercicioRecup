@@ -75,7 +75,7 @@ class ImageUploadController extends Controller
         $avatar = $user->avatar;
         $resource=Storage::disk('public')->get($avatar);
         return Response::make($resource, 200, [
-            'Content-Type' => 'image/jpeg',
+            'Content-Type' => 'image/jpegc, image/png, image/jpg, image/gif, image/svg',
             'Content-Disposition' => 'inline; filename="'.$avatar.'"'
         ]);
     }
