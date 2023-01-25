@@ -14,9 +14,7 @@ const form = document.getElementsByTagName("form")[0];
 const error_name = document.querySelector(".error_name");
 const error_email = document.querySelector(".error_email");
 const error_password = document.querySelector(".error_password");
-const error_confirm_password = document.querySelector(
-  ".error_confirm-password"
-);
+const error_confirm_password = document.querySelector(".error_confirm-password");
 const image = document.querySelector(".image");
 const avatar = document.querySelector(".avatar");
 

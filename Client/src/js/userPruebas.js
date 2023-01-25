@@ -1,2 +1,3 @@
-// import {crearModalAsignar} from './pruebasAsignadas.js';
-// crearModalAsignar();
+
+// import {PruebasUser} from './pruebasAsignadas.js';
+// PruebasUser();

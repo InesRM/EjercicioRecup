@@ -7,12 +7,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <body class="bg-image-detalle" style="
-  background-image: url('../assets/img/cielo-azul-claro.jpg');
+  background-image: url('../assets/img/nubes.jpg');
   height: 100vh;">
     <div class="btn-volver">
       <a href="./pruebas.html"><button class="volver"><i class="fa fa-arrow-left" aria-hidden="true"></i> Volver</button></a>
     </div>
-    <div class="contenedor text-light">
+    <div class="contenedor">
         <div>
             <div class="titulos mb-4">
               <h1 class="mb-3">Puntual</h1>
@@ -22,14 +22,14 @@
             <form class="list-group puntual" id="formulario" novalidate>
                 <p class="mb-3 text-center"></p>
                 <p class="mb-3 text-center"></p>
-                <p class="mb-3 text-center">Descripción</p>
+                <p class="mb-3">Descripción</p>
                 <div class="preguntas mb-2">
                     <div class="form-check">
                         <textarea class="form-control mb- descripcion" name="pregunta" id="exampleFormControlTextarea1" rows="3" required></textarea>
                         <span class="errordescripcion"></span>
                     </div>
                 </div>
-                <p class="mb-3 text-center">Atributo</p>
+                <p class="mb-3">Atributo</p>
                 <div class="form-check sm">
                     <label>Habilidad : 
                         <select name="habilidad" class="form-select habilidad mt-2 mb-2" required>
@@ -43,12 +43,12 @@
                     </label>
                     <span class="errorhabilidad mb-2"></span>
                 </div>
-                <p class="mb-3 text-center">Porcentaje de dificultad</p>
+                <p class="mb-3">Porcentaje de dificultad</p>
                 <div class="form-check mb-2">
                     <input name = "porcentaje" class="form-control porcentaje mb-2" type="number" placeholder="0" required max="100" min="0" minlength="1" maxlength="3">
                     <span class="errorporcentaje"></span>
                 </div>
-                <p class="mb-3 text-center">Cantidad de Destino</p>
+                <p class="mb-3">Cantidad de Destino</p>
                 <div class="form-check mb-3">
                     <input name = "destino" class="form-control destino mb-3" type="number" placeholder="0" required max="100" min="0" minlength="1" maxlength="3">
                     <span class="errordestino"></span>

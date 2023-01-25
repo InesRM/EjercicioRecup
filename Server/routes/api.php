@@ -65,12 +65,5 @@ Route::middleware('auth:sanctum')->prefix('asignar')->group(function () {
     Route::get('listar/usuariosasignados/{idprueba}', [AsignarController::class,'getUsuariosAsignados']);
 });
 
-// Route::controller(PruebaController::class)->prefix('prueba')->group(function () {
-//     Route::post('eleccion/crear', 'insertPruebaEleccion')->middleware(['cors']);
-//     Route::post('valoracion/crear', 'insertPruebaValoracion')->middleware(['cors']);
-//     Route::post('puntual/crear', 'insertPruebaPuntual')->middleware(['cors']);
-//     Route::post('resplibre/crear', 'insertPruebaRespLibre')->middleware(['cors']);
-//     Route::get('listar', 'getPruebas')->middleware(['cors']);
-//     Route::delete('borrar/{id}', 'deletePrueba')->middleware(['cors']);
-// });
+
 
