@@ -1,3 +1,8 @@
+import '../styles/styles.scss'
 
-// import {PruebasUser} from './pruebasAsignadas.js';
-// PruebasUser();
+// Import all of Bootstrap JS
+import * as bootstrap from 'bootstrap'
+
+
+import {initPruebas} from './pruebasAsignadas.js';
+initPruebas();
