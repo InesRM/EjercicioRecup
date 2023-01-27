@@ -1,52 +1,62 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Ejercicio Recuperacion</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  </head>
-  <body class="bg-image-detalle" style="
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ejercicio Recuperacion</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body class="bg-image-detalle" style="
   background-image: url('../assets/img/lila-cielo.jpg');
   height: 100vh;">
-    <div class="btn-volver">
-      <a href="./perfilHumano.html"><button class="volver"><i class="fa fa-arrow-left" aria-hidden="true"></i>Atrás</button></a>
-    </div>
-    <div class="vh-100 d-flex justify-content-center align-items-center formulario">
-        <div class="bg-light col-md-4  shadow-sm border rounded-3">
-          <div class="p-2 border rounded-3 contenedorRegistro">
-            <h2 class="text-center mb-4">Cambiar contraseña</h2>
-          </div>
-          <form class="p-5" id="registro">
-            <div class="mb-4">
-                <label class="form-label">Contraseña</label>
-                <input type="password" class="form-control area-texto password" name="password" required>
-                <span class="error_password"></span>
-            </div>
-            <div class="mb-4">
-                <label class="form-label">Nueva Contraseña</label>
-                <input type="password" class="form-control area-texto new_password" name="new_password" required>
-                <span class="error_password"></span>
-            </div>
-            <div class="mb-4">
-              <label class="form-label">Confirmar contraseña</label>
-              <input type="password" class="form-control area-texto confirm_password" name="confirm_password" required>
-              <span class="error_confirm-password"></span>
-          </div>
-            <div class="mb-4 d-grid gap-2 col-6 mx-auto boton">
-                <button class="btn btn-primary" type="submit">Actualizar</button>
-            </div>
-         </form>  
-        </div>
-    </div>
-    <div id="modalRegistro" class="modal">
-      <div class="modalContent">
-        <span class="close">×</span>
-        <p id="parrafo"></p>
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb-item-padding-x:2rem">
+      <li class="breadcrumb"><a style="color:white" href="./perfilHumano.html">Menu</a></li>
+      <li class="breadcrumb active text-white" aria-current="page">Cambiar Contraseña</li>
+    </ol>
+  </nav>
+  <div class="btn-volver">
+    <a href="./perfilHumano.html"><button class="volver"><i class="fa fa-arrow-left"
+          aria-hidden="true"></i>Atrás</button></a>
+  </div>
+  <div class="vh-50 d-flex justify-content-center align-items-center formulario">
+    <div class="bg-light col-md-4  shadow-sm border rounded-3">
+      <div class="p-2 border rounded-3 contenedorRegistro">
+        <h2 class="text-center mb-4">Cambiar contraseña</h2>
       </div>
+      <form class="p-5" id="registro">
+        <div class="mb-4">
+          <label class="form-label">Contraseña</label>
+          <input type="password" class="form-control area-texto password" name="password" required>
+          <span class="error_password"></span>
+        </div>
+        <div class="mb-4">
+          <label class="form-label">Nueva Contraseña</label>
+          <input type="password" class="form-control area-texto new_password" name="new_password" required>
+          <span class="error_password"></span>
+        </div>
+        <div class="mb-4">
+          <label class="form-label">Confirmar contraseña</label>
+          <input type="password" class="form-control area-texto confirm_password" name="confirm_password" required>
+          <span class="error_confirm-password"></span>
+        </div>
+        <div class="mb-4 d-grid gap-2 col-6 mx-auto boton">
+          <button class="btn btn-primary" type="submit">Actualizar</button>
+        </div>
+      </form>
     </div>
-    <!-- <footer class="fixed-bottom">
+  </div>
+  <div id="modalRegistro" class="modal">
+    <div class="modalContent">
+      <span class="close">×</span>
+      <p id="parrafo"></p>
+    </div>
+  </div>
+  <!-- <footer class="fixed-bottom">
       <span>@Ejercicio Recuperacion</span>
     </footer> -->
-  </body>
+</body>
+
 </html>

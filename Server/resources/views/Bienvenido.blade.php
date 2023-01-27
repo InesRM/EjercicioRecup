@@ -14,7 +14,7 @@
 <body>
 	<nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
 		<div class="container-fluid">
-			<a class="navbar-brand" href="#"><img src="{{asset('../../storage/app/public/asset/dioses-olimpo.jpg')}}"></a>
+			<a class="navbar-brand" href="#"><img src="{{asset('asset/dioses-olimpo.jpg')}}"></a>
 			<div class="row w-100 align-items-center">
 				<div class="row welcome text-center">
 					<div class="col-12">
@@ -38,7 +38,7 @@
 		</div>
 	</nav>
 	<div class="bg-image" style="
-		   background-image: url('storage\app\public\asset\cielo2.jpg');">
+		   background-image: url({{asset('asset/cielo2.jpg')}});">
 		<br>
 		<br>
 		<h2 class="display-2 text-center text-light">
@@ -121,7 +121,7 @@
 				<br>
 			</div>
 			<div class="col-lg-6">
-				<img class="img-fluid" src="storage\app\public\asset\th-594701018.jpg">
+				<img class="img-fluid" src="{{asset('asset/th-594701018.jpg')}}">
 			</div>
 		</div>
 	</div>

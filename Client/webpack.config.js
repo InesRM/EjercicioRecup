@@ -36,10 +36,6 @@ const filesHTML = [
         chunks: ['registro']
     },
     {
-        filename: './html/listadoUsuarios.html',
-        chunks: ['listadoUsuarios']
-    },
-    {
         filename: './html/perfilHumano.html',
         chunks: ['perfilHumano']
     },
@@ -82,10 +78,6 @@ const filesHTML = [
     {
         filename: './html/matarHumanos.html',
         chunks: ['matarHumanos']
-    },
-    {
-        filename: './html/landing.html',
-        chunks: ['landing']
     },
     {
         filename: './html/pruebasAsignadas.html',
@@ -149,7 +141,6 @@ module.exports = {
         pruebasRespLibre: './src/js/indexValidacion.js',
         listadoPruebas: './src/js/indexListado.js',
         registro: './src/js/registro.js',
-        listadoUsuarios: './src/js/listadoUsuarios.js',
         perfilHumano: './src/js/perfilHumano.js',
         perfilDios: './src/js/perfilDios.js',
         perfilHades: './src/js/perfilDios.js',
